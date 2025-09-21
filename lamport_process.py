@@ -49,6 +49,9 @@ class LamportClock:
         server_thread.start()
         increment_thread.start()
 
+        print(f"Process on port {self.port} started...")
+
+
 if __name__ == "__main__":
     lamport_process = LamportClock(8001)
     lamport_process.start()
@@ -65,4 +68,3 @@ if __name__ == "__main__":
     print("\n--- Sending message from 8001 to 8002. ---")
     lamport_process.send_message(8002)
 
-        print(f"Process on port {self.port} started...")
